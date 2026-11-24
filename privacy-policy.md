@@ -38,10 +38,16 @@ to recognise, acknowledge, and restore the purchase. It stores an ownership flag
 recognised offline. Errant Step does not send purchase tokens to a developer-operated server. Google Play may make
 transaction information available to Errant Step through its developer and payments tools.
 
-Google Play and its billing library handle purchase information and technical billing diagnostics to provide and
-maintain the billing service. Billing can communicate with Google when the app connects to the service, including
-when checking existing purchases without starting a new purchase. Google's handling of that information is described
-in the [Google Privacy Policy](https://policies.google.com/privacy). Your drawings are not sent to Google Play Billing.
+Google Play and its billing library handle purchase information and send technical billing diagnostics to Google to
+operate, troubleshoot, and improve the billing service. These diagnostics include billing API results and errors,
+timings, a randomly generated billing-client session identifier, app and library versions, Android version, device
+brand/model/manufacturer/build and memory capacity, language and country settings, time zone, and network/carrier
+information. Diagnostic uploads use HTTPS and may be queued in private app storage for later delivery or retry.
+
+Billing can communicate with Google when the app connects to the service, including when checking existing purchases
+without starting a new purchase. Traced has no setting to turn off these billing diagnostics. Google controls retention
+of information it receives under the [Google Privacy Policy](https://policies.google.com/privacy). Your drawings are not
+sent to Google Play Billing.
 
 ## Backups and diagnostics
 
